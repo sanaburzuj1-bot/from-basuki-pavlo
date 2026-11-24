@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>З першим снігом</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stars"></div><div class="snow" id="snow"></div>
+<main class="scene">
+  <div class="bouquet" aria-label="Анімація букета жовтих тюльпанів">
+    <svg viewBox="0 0 500 620" class="art" role="img" aria-label="Жовті тюльпани в кремовій обгортці з бантом">
+      <defs>
+        <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f4e4cd"/><stop offset=".48" stop-color="#d9c2a5"/><stop offset="1" stop-color="#b99b7c"/>
+        </linearGradient>
+        <linearGradient id="paperLight" x1="0" y1="0" x2="1" y2="0">
+          <stop stop-color="#fff1dc"/><stop offset="1" stop-color="#c9ad8d"/>
+        </linearGradient>
+        <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+          <stop stop-color="#315d31"/><stop offset=".5" stop-color="#8eb95e"/><stop offset="1" stop-color="#28502d"/>
+        </linearGradient>
+        <radialGradient id="yellow" cx=".35" cy=".2" r=".9">
+          <stop stop-color="#fffaa1"/><stop offset=".55" stop-color="#ffe64b"/><stop offset="1" stop-color="#e8aa10"/>
+        </radialGradient>
+        <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+      </defs>
+      <!-- Stems/leaves, growing up out of the paper cone -->
+      <g class="plant plant-back">
+        <path class="stem s1" d="M245 440 Q190 345 170 255"/><path class="stem s2" d="M250 445 Q235 320 225 195"/><path class="stem s3" d="M255 442 Q285 300 315 210"/><path class="stem s4" d="M258 440 Q330 350 360 270"/><path class="stem s5" d="M247 440 Q175 360 135 310"/>
+        <path class="leaf l1" d="M215 400 Q120 375 142 325 Q195 340 215 400Z"/><path class="leaf l2" d="M267 388 Q360 345 350 305 Q300 330 267 388Z"/>
+        <path class="leaf l3" d="M230 340 Q135 305 160 265 Q205 288 230 340Z"/><path class="leaf l4" d="M280 345 Q365 295 345 255 Q305 285 280 345Z"/>
+        <path class="leaf l5" d="M250 360 Q205 270 230 240 Q258 290 250 360Z"/>
+      </g>
+      <!-- Tulip heads: layered cup petals, soft cartoon/florist illustration -->
+      <g class="heads">
+        <g class="t t1" transform="translate(130 250)">
+          <ellipse class="petal" cx="-18" cy="-5" rx="20" ry="35" transform="rotate(-20)"/>
+          <ellipse class="petal" cx="16" cy="-5" rx="21" ry="36" transform="rotate(17)"/>
+          <path class="cup" d="M-35 4 Q-28 -28 -15 -27 Q-3 -37 5 -23 Q18 -40 29 -22 Q38 -5 33 12 Q23 30 0 32 Q-25 29 -35 4Z"/>
+          <path class="shine" d="M-18 -16 Q-22 3 -12 17" />
+        </g>
+        <g class="t t2" transform="translate(175 205)">
+          <ellipse class="petal" cx="-17" cy="-4" rx="21" ry="38" transform="rotate(-19)"/><ellipse class="petal" cx="17" cy="-4" rx="21" ry="38" transform="rotate(18)"/>
+          <path class="cup" d="M-36 3 Q-30 -26 -16 -26 Q-3 -39 7 -23 Q18 -39 30 -21 Q39 -4 34 12 Q23 31 0 32 Q-25 29 -36 3Z"/><path class="shine" d="M-18 -17 Q-22 2 -12 17"/>
+        </g>
+        <g class="t t3" transform="translate(230 165)">
+          <ellipse class="petal" cx="-17" cy="-4" rx="21" ry="40" transform="rotate(-18)"/><ellipse class="petal" cx="17" cy="-4" rx="21" ry="40" transform="rotate(18)"/>
+          <path class="cup" d="M-36 3 Q-30 -26 -16 -26 Q-3 -39 7 -23 Q18 -39 30 -21 Q39 -4 34 12 Q23 31 0 32 Q-25 29 -36 3Z"/><path class="shine" d="M-18 -17 Q-22 2 -12 17"/>
+        </g>
+        <g class="t t4" transform="translate(310 210)">
+          <ellipse class="petal" cx="-17" cy="-4" rx="21" ry="37" transform="rotate(-19)"/><ellipse class="petal" cx="17" cy="-4" rx="21" ry="37" transform="rotate(18)"/>
+          <path class="cup" d="M-36 3 Q-30 -26 -16 -26 Q-3 -39 7 -23 Q18 -39 30 -21 Q39 -4 34 12 Q23 31 0 32 Q-25 29 -36 3Z"/><path class="shine" d="M-18 -17 Q-22 2 -12 17"/>
+        </g>
+        <g class="t t5" transform="translate(365 275)">
+          <ellipse class="petal" cx="-17" cy="-4" rx="21" ry="35" transform="rotate(-19)"/><ellipse class="petal" cx="17" cy="-4" rx="21" ry="35" transform="rotate(18)"/>
+          <path class="cup" d="M-36 3 Q-30 -26 -16 -26 Q-3 -39 7 -23 Q18 -39 30 -21 Q39 -4 34 12 Q23 31 0 32 Q-25 29 -36 3Z"/><path class="shine" d="M-18 -17 Q-22 2 -12 17"/>
+        </g>
+      </g>
+      <!-- Hand-folded paper wrapping cone -->
+      <g class="wrap">
+        <path class="backwrap" d="M92 335 Q248 388 406 335 L337 500 Q251 572 164 500Z"/>
+        <path class="leftwrap" d="M100 337 L246 390 L165 502 L92 335Z"/>
+        <path class="rightwrap" d="M405 337 L252 390 L338 502 L405 337Z"/>
+        <path class="frontwrap" d="M120 347 Q247 405 385 347 L333 488 Q252 540 170 488Z"/>
+        <path class="crease" d="M250 390 L250 518 M147 363 L197 494 M352 363 L302 494"/>
+        <path class="wrapedge" d="M100 337 Q245 397 405 337"/>
+      </g>
+      <!-- bow and tails -->
+      <g class="bow">
+        <path class="tail tailL" d="M244 492 L186 548 L204 565 L237 553 L248 526Z"/>
+        <path class="tail tailR" d="M257 493 L319 547 L300 565 L269 551 L250 526Z"/>
+        <path class="loop loopL" d="M247 500 Q193 459 177 490 Q174 524 246 515Z"/>
+        <path class="loop loopR" d="M253 500 Q308 459 325 490 Q328 524 254 515Z"/>
+        <ellipse class="knot" cx="250" cy="506" rx="18" ry="20"/>
+      </g>
+    </svg>
+  </div>
+  <div class="caption">З першим снігом</div>
+</main>
+<script src="script.js"></script>
+</body></html>
